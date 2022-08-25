@@ -1,6 +1,6 @@
 import { Navbar } from "./components/Nav/Navbar";
 import { ItemListContainer } from "./components/itemListContainer/itemListContainer";
-import Counter from "./components/counter/Counter";
+import ItemCount from "./components/counter/ItemCount";
 
 export const App = () => {
     const saludo = "Bienvenidos"
@@ -17,12 +17,14 @@ export const App = () => {
         )
     };
 
-    const onAdd = alert("Gracias por su compra!");
+    const onAdd = (param) =>{
+        alert(`compraste ${param} productos`);
+    }
     return (
         <>
             <Navbar/>
             <ItemListContainer saludo={saludo}/>
-            <Counter stock={10} initial={1} onAdd={onAdd}/>  
+            <ItemCount stock={10} initial={1} onAdd={onAdd}/>  
         </>
     );
 };
