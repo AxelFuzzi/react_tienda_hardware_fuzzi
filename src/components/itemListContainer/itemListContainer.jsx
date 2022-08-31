@@ -31,5 +31,3 @@ export const ItemListContainer = (props)=>{
         </>
     );
 };
-//este bloque va dentro del componente Item,hay que crear ItemList que recibe el estado y mapea el array usando el componente Item para renderizar los datos en e DOM.
-//export default itemListContainer
