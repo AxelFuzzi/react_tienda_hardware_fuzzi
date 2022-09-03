@@ -1,10 +1,11 @@
 import React from 'react'
 import { CartWidget } from './CartWidget'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
   return (
     <>
-    <h1 className="titulo">Hardware Online</h1>
+    <Link to="/" className='titulo'><h1>Hardware Online</h1></Link>
     <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center" >
       <div className="container-fluid">
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,8 +24,8 @@ export const Navbar = () => {
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a className="dropdown-item" href="#">Tarjetas gráficas</a></li>
                     <li><a className="dropdown-item" href="#">Microprocesadores</a></li>
-                    <li><a className="dropdown-item" href="#">Memorias Ram</a></li>
-                    <li><a className="dropdown-item" href="#">Fuentes</a></li>
+                    <li><Link className="dropdown-item" to="/category/ram">Memorias Ram</Link></li>
+                    <li><Link className="dropdown-item" to="/category/fuente">Fuentes</Link></li>
                     <li><a className="dropdown-item" href="#">Gabinetes</a></li>
                     <li><a className="dropdown-item" href="#">Almacenamiento</a></li>
                   </ul>
@@ -36,9 +37,9 @@ export const Navbar = () => {
                     <li><a className="dropdown-item" href="#">HDD</a></li>
                   </ul>
                 </li>
-                  <li><a className="dropdown-item" href="#">Monitores</a></li>
-                  <li><a className="dropdown-item" href="#">Notebooks</a></li>
-                  <li><a className="dropdown-item" href="#">Perifericos</a></li>
+                <li><a className="dropdown-item" href="#">Monitores</a></li>
+                <li><Link className="dropdown-item" to="/category/notebook">Notebooks</Link></li>
+                <li><a className="dropdown-item" href="#">Perifericos</a></li>
               </ul>
             </li>
               <li className="nav-item">
@@ -60,4 +61,3 @@ export const Navbar = () => {
   )
 }
 
-//export default Navbar

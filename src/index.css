@@ -19,8 +19,14 @@
   
   .titulo {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.85);
+    color: rgb(22, 20, 20);
+    text-decoration: none;
   }
-  
+
+  .titulo:hover {
+    color: rgb(22, 20, 20);
+  }
+ 
   /*--------------menu bar--------------*/
   nav a {
     text-decoration: none;

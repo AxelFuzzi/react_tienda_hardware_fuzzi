@@ -2,6 +2,7 @@ import { Navbar } from "./components/Nav/Navbar";
 import { ItemListContainer } from "./components/itemListContainer/itemListContainer";
 import ItemCount from "./components/counter/ItemCount";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 export const App = () => {
     const saludo = "Bienvenidos"
 
@@ -21,12 +22,15 @@ export const App = () => {
         alert(`compraste ${param} productos`);
     }
     return (
-        <>
+        <BrowserRouter>
             <Navbar/>
-            <ItemListContainer saludo={saludo}/>
-            <ItemDetailContainer/>
+            <Routes>
+                <Route path="/" element={<ItemListContainer saludo={saludo}/>}/>
+                <Route path="/category/:id" element={<ItemListContainer/>}/>
+                <Route path="/item/:id" element={<ItemDetailContainer/>}/>   
+            </Routes>
             <ItemCount stock={10} initial={1} onAdd={onAdd}/>  
-        </>
+        </BrowserRouter>
     );
 };
 

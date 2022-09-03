@@ -9,7 +9,7 @@ export const Products = [
         description: 'Fuente Thermaltake Smart 500w 80plus white',
         price: 10000,
         stock: 50,
-        category: 'Fuente de poder',
+        category: 'fuente',
         img : Thermaltake,
     },
     {
@@ -18,7 +18,7 @@ export const Products = [
         description: 'Memoria Hyperx Fury 16gb DDR4 3200MHZ',
         price: 12000,
         stock: 10,
-        category: 'RAM',
+        category: 'ram',
         img: HyperxFury,
     },
     {
