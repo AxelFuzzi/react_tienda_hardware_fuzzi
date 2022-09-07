@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 export const App = () => {
     const saludo = "Bienvenidos"
 
-    const stock = (param) =>{
+    /*const stock = (param) =>{
         return(
             param
         )
@@ -20,7 +20,7 @@ export const App = () => {
 
     const onAdd = (param) =>{
         alert(`compraste ${param} productos`);
-    }
+    }*/
     return (
         <BrowserRouter>
             <Navbar/>
@@ -29,8 +29,7 @@ export const App = () => {
                 <Route path="/category/:id" element={<ItemListContainer/>}/>
                 <Route path="/item/:id" element={<ItemDetailContainer/>}/>   
             </Routes>
-            <ItemCount stock={10} initial={1} onAdd={onAdd}/>  
+              
         </BrowserRouter>
     );
 };
-

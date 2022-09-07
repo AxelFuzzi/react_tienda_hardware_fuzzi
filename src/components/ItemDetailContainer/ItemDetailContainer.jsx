@@ -15,7 +15,7 @@ export const ItemDetailContainer = () =>{
 
             const prodEncontrado = Products.find((prod)=> prod.id === idProdNumerico);
 
-            setTimeout(() => {res (prodEncontrado)}, 2000);
+            setTimeout(() => {res (prodEncontrado)}, 1000);
                 
         });
         getProduct()

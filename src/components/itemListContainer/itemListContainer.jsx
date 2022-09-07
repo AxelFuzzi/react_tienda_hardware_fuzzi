@@ -14,7 +14,7 @@ export const ItemListContainer = (props)=>{
 
             const prodFiltrados = Products.filter((prod) => prod.category === id)
 
-            setTimeout(() => {res (id ? prodFiltrados : Products);}, 2000);
+            setTimeout(() => {res (id ? prodFiltrados : Products);}, 1000);
             
         });
     
