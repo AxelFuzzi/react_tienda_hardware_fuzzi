@@ -1,15 +1,18 @@
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 import React from 'react'
+import { useContext } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContext';
 import ItemCount from '../counter/ItemCount'
 import Item from '../ItemList/Item';
 
 export const ItemDetail = ({item}) => {
   const [cantidad, setCantidad] = useState(0);
+  const {addItems} = useContext(CartContext);
 
-  const onAdd = (cantidadItemCount)=> {
+  const onAdd = (cantidadItemCount) => {
     setCantidad(cantidadItemCount);
+    addItems(item, cantidadItemCount);
   };
 
   return (

@@ -10,19 +10,19 @@ export const ItemDetailContainer = () =>{
 
     const idProdNumerico = Number(id);
 
-    useEffect(()=>{
-        const getProduct = ()=> new Promise((res, rej)=>{
+    useEffect(() => {
+        const getProduct = () => new Promise((res, rej) => {
 
-            const prodEncontrado = Products.find((prod)=> prod.id === idProdNumerico);
+            const prodEncontrado = Products.find((prod) => prod.id === idProdNumerico);
 
             setTimeout(() => {res (prodEncontrado)}, 1000);
                 
         });
         getProduct()
-        .then((data)=>{
+        .then((data) => {
             setItem(data);
         })
-        .catch((error)=>{
+        .catch((error) => {
             console.log(error);   
         })
 
