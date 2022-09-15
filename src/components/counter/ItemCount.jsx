@@ -1,7 +1,12 @@
 import React, {useState} from 'react'
+import { useEffect } from 'react';
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial = 1, onAdd}) => {
     const [count, setCount] = useState(initial)
+
+    useEffect(() => {
+        setCount(initial)}, [initial]
+    )
 
     const sumar = () =>{
         if (count < stock){

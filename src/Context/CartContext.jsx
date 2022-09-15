@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { Products } from "../components/Mock/Products";
 
 export const CartContext = createContext();
 
@@ -28,7 +27,7 @@ export const CartProvider = (props) => {
             if (prod.id === item.id) {
                 const productoActualizado = {
                     ...prod,
-                    cantidad: prod.cantidad + cantidad,
+                    cantidad: cantidad,
                 };
                 return productoActualizado;
             }else {
@@ -50,9 +49,34 @@ export const CartProvider = (props) => {
         const carritoFiltrado = cart.filter((prod) => prod.id !== id);
         setCart(carritoFiltrado);
     }
+
+    //indica el total de items en el cart widget
+    const getProductQuantity = (id) => {
+        const product = cart.find((prod) => prod.id === id)
+        return product?.cantidad;
+        //optional changing
+    }
+
+    //indica el total del precio en el cart.
+    const totalPrice = () => {
+        let acumulador = 0
+        cart.forEach((prod) => {
+            acumulador += prod.price * prod.cantidad;
+        });
+        return acumulador;
+    };
+
+    //indica el total de cantidad de items en cart.
+    const totalQuantity = () => {
+        let acumulador = 0
+        cart.forEach((prod) => {
+            acumulador += prod.cantidad;
+        });
+        return acumulador;
+    }
         
     return (
-        <CartContext.Provider value={{cart, addItems, clear, removeItem}}>
+        <CartContext.Provider value={{cart, addItems, clear, removeItem, getProductQuantity, totalPrice, totalQuantity}}>
             {props.children}
         </CartContext.Provider>
     );
