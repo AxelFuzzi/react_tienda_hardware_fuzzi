@@ -10,7 +10,7 @@ export const Products = [
         price: 10000,
         stock: 50,
         category: 'fuente',
-        img : Thermaltake,
+        img : 'FuenteThermaltakeSmart500W80PlusWhite-min.jpeg',
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export const Products = [
         price: 12000,
         stock: 10,
         category: 'ram',
-        img: HyperxFury,
+        img: "MemoriaHyperXFuryRGB16GBDDR43200Mhz.jpg",
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ export const Products = [
         price: 200000,
         stock: 20,
         category: 'notebook',
-        img: NotebookAsus,
+        img: "NotebookAsusZenBook14″I5SSD512GBMX250.jpg",
     },
 ];
 

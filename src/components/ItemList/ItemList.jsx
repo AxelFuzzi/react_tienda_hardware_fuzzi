@@ -1,7 +1,7 @@
 import React from 'react'
-import Item from './Item'
+import { Item } from './Item'
 
-const ItemList = ({items}) => {
+export const ItemList = ({items}) => {
     
   return (
     <div className="row row-cols-1 row-cols-md-4 g-4 row-cols-sm-2">
@@ -9,5 +9,3 @@ const ItemList = ({items}) => {
     </div>
   )
 }
-
-export default ItemList
