@@ -19,7 +19,7 @@ export const Products = [
         price: 12000,
         stock: 10,
         category: 'ram',
-        img: "MemoriaHyperXFuryRGB16GBDDR43200Mhz.jpg",
+        img: 'MemoriaHyperXFuryRGB16GBDDR43200Mhz.jpg',
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ export const Products = [
         price: 200000,
         stock: 20,
         category: 'notebook',
-        img: "NotebookAsusZenBook14″I5SSD512GBMX250.jpg",
+        img: 'NotebookAsusZenBook14″I5SSD512GBMX250.jpg',
     },
 ];
 

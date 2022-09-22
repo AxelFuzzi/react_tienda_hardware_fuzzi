@@ -3,7 +3,7 @@ import { ItemListContainer } from "./components/itemListContainer/itemListContai
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { CartProvider } from "./Context/CartContext";
-import Cart from "./components/Cart/Cart";
+import { Cart } from "./components/Cart/Cart";
 
 export const App = () => {
     const saludo = "Bienvenidos"
@@ -22,4 +22,3 @@ export const App = () => {
         </CartProvider>
     );
 };
-

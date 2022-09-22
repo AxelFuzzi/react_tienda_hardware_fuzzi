@@ -59,7 +59,7 @@ export const CartProvider = (props) => {
 
     //indica el total del precio en el cart.
     const totalPrice = () => {
-        let acumulador = 0
+        let acumulador = 0;
         cart.forEach((prod) => {
             acumulador += prod.price * prod.cantidad;
         });

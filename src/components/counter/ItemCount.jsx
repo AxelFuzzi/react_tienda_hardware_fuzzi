@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useEffect } from 'react';
 
-const ItemCount = ({stock, initial = 1, onAdd}) => {
+export const ItemCount = ({stock, initial = 1, onAdd}) => {
     const [count, setCount] = useState(initial)
 
     useEffect(() => {
@@ -32,5 +32,3 @@ const ItemCount = ({stock, initial = 1, onAdd}) => {
     </div>
   )
 }
-
-export default ItemCount

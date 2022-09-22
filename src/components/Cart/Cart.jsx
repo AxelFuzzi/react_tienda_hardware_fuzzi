@@ -1,17 +1,29 @@
-import React from 'react'
-import { useContext } from 'react'
-import { CartContext } from '../../Context/CartContext'
-import { Link } from 'react-router-dom'
+import React, { useState, useContext } from 'react';
+import { CartContext } from '../../Context/CartContext';
+import { Link } from 'react-router-dom';
+import { Form } from '../Form/Form'
 
-const Cart = () => {
-    const {cart, clear, removeItem, totalPrice} = useContext(CartContext)
+export const Cart = () => {
+  const [idCompra, setIdCompra] = useState('');
+
+  const {cart, clear, removeItem, totalPrice} = useContext(CartContext)
+
+  const handleId = (id) => {
+    setIdCompra(id);
+  };
+
+  if (idCompra) {
+    return <h1>Gracias por tu compra, tu ID es: {idCompra}</h1>
+  }
+
+  if (cart.length === 0){
+    return(
+      <h3>carrito vacio, diríjase a este <Link to="/">link</Link> para agregar un producto al carrito!</h3>
+    );
+  }
+  
   return (
-    <>
-    {cart.length === 0 
-    ? 
-    <h3>carrito vacio, diríjase a este <Link to="/">link</Link> para agregar un producto al carrito!</h3>
-    : 
-    <div>
+      <div>
       {cart.map((prod) => 
         <div key={prod.id}>
           <h2>{prod.title}</h2>
@@ -21,11 +33,8 @@ const Cart = () => {
       )}
       <button className="boton-agregar" onClick={clear}>Clear cart</button>
       <h3>Total: ${totalPrice()}</h3>
+      <Form cart={cart} totalPrice={totalPrice()} clear={clear} handleId={handleId}/>
       <button>Terminar compra</button>   
-    </div>}
-    </>
-  )
+    </div>
+    )   
 }
-
-export default Cart
-

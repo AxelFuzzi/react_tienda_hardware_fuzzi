@@ -1,9 +1,7 @@
-import React from 'react'
-import { useContext } from 'react';
-import { useState } from 'react';
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext';
-import ItemCount from '../counter/ItemCount'
+import { ItemCount } from '../counter/ItemCount'
 
 export const ItemDetail = ({item}) => {
   const [cantidad, setCantidad] = useState(0);
@@ -16,7 +14,7 @@ export const ItemDetail = ({item}) => {
 
   return (
     <div>
-        <img src={item.img} alt={item.title} />
+        <img src={item.img} alt={item.title} className="card-img-top product-photo"/>
         <h2>{item.title}</h2>
         <h3>{item.description}</h3>
         <h4>{item.price}</h4>
