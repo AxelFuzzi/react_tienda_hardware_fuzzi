@@ -22,24 +22,24 @@ export const Navbar = () => {
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pc de Escritorio</a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a className="dropdown-item" href="#">Tarjetas gráficas</a></li>
-                    <li><a className="dropdown-item" href="#">Microprocesadores</a></li>
+                    <li><Link className="dropdown-item" to="/category/gpu">Tarjetas gráficas</Link></li>
+                    <li><Link className="dropdown-item" to="/category/cpu">Microprocesadores</Link></li>
                     <li><Link className="dropdown-item" to="/category/ram">Memorias Ram</Link></li>
                     <li><Link className="dropdown-item" to="/category/fuente">Fuentes</Link></li>
-                    <li><a className="dropdown-item" href="#">Gabinetes</a></li>
-                    <li><a className="dropdown-item" href="#">Almacenamiento</a></li>
+                    <li><Link className="dropdown-item" to="/category/case">Gabinetes</Link></li>
+                    <li><Link className="dropdown-item" to="/category/memoria">Almacenamiento</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Almacenamiento</a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a className="dropdown-item" href="#">SSD</a></li>
-                    <li><a className="dropdown-item" href="#">HDD</a></li>
+                    <li><Link className="dropdown-item" to="/category/memoria">SSD</Link></li>
+                    <li><Link className="dropdown-item" to="/category/memoria">HDD</Link></li>
                   </ul>
                 </li>
-                <li><a className="dropdown-item" href="#">Monitores</a></li>
+                <li><Link className="dropdown-item" to="/category/monitor">Monitores</Link></li>
                 <li><Link className="dropdown-item" to="/category/notebook">Notebooks</Link></li>
-                <li><a className="dropdown-item" href="#">Perifericos</a></li>
+                <li><Link className="dropdown-item" to="/category/perifericos">Perifericos</Link></li>
               </ul>
             </li>
               <li className="nav-item">

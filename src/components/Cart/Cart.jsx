@@ -33,8 +33,7 @@ export const Cart = () => {
       )}
       <button className="boton-agregar" onClick={clear}>Clear cart</button>
       <h3>Total: ${totalPrice()}</h3>
-      <Form cart={cart} totalPrice={totalPrice()} clear={clear} handleId={handleId}/>
-      <button>Terminar compra</button>   
+      <Form cart={cart} totalPrice={totalPrice()} clear={clear} handleId={handleId}/>   
     </div>
     )   
 }

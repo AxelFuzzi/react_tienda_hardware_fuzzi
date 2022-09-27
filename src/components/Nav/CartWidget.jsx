@@ -7,7 +7,7 @@ export const CartWidget = () => {
     const {totalQuantity} = useContext(CartContext)
 
     return(
-        <Link to="/cart">
+        <Link className="link-carrito" to="/cart">
             <button className="boton-carrito"><i class='fas fa-shopping-cart'></i>
             <span>{totalQuantity() === 0 ? "" : totalQuantity()}</span></button>
         </Link>

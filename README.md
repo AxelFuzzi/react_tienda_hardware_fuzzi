@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Proyecto HardwareOnline
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tecnologias utilizadas:
 
-## Available Scripts
+- [JavaScript](https://www.javascript.com/)
+- [React](https://reactjs.org/)
+- [React Router Dom](https://reactrouter.com/en/main)
+- [CSS](https://developer.mozilla.org/es/docs/Learn/CSS/First_steps/What_is_CSS)
+- [Bootstrap](https://getbootstrap.com/)
+- [Firebase](https://firebase.google.com/)
 
-In the project directory, you can run:
+## Sobre el proyecto.
 
-### `npm start`
+Este proyecto es una ejemplo de un sitio wed basado estética y estructuralmente en varios Ecommerces sobre hardware.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Está escrito en `Javascript` utilizando `React` para modular los segmentos del sitio y aprovecha `React Router` para crear `links` dinámicos basando en la técnica `SPA`, usa `Firebase` como base de datos para alojar la información de los productos y la orden de compra generada al finalizar una compra. `CSS` y `Boostrap` para agregar estilo.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Correr el proyecto.
 
-### `npm test`
+```git clone link de mi repositorio```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```npm install```
 
-### `npm run build`
+```npm start```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+si al utilizar el último comando mencionado no inicia el proyecto abre [http://localhost:3000](http://localhost:3000) para ver el sitio en el navegador.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## detener el proyecto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`ctrl + c`
 
-### `npm run eject`
+## Una vez dentro del sitio:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Utilizar en navbar para navegar entre las diferentes categorias y agregar productos y la cantidad deseada al carrito, una vez agregados dirijase al carrito para llenar un pequeño formulario y clickear sobre el boton de enviar así generar un ID que identifica su orden de compra, tanto los datos de los productos comprados como los datos personales ingresados por el usuario quedaran almacenados en la base de datos de firebase simulando una compra real.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](https://res.cloudinary.com/doy4qnmvp/image/upload/v1664301190/hardware-online-gif_xjlgzy.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Nota: los datos ingresados por el usuario no se utilizaran con ningun fin, son solo a modo de demostración.**

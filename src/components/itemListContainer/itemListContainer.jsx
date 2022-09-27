@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ItemList } from '../ItemList/ItemList';
 import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
@@ -7,15 +7,14 @@ import { getDocs, collection, query, where } from "firebase/firestore";
 export const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
 
-    const {id} = useParams()
+    const {id} = useParams();
 
     useEffect(() => {
         const itemCollection = collection(db, "productos");
-        //productos es el nombre de la lista de elementos en firebase.
-        //const filtro = query(itemCollection, where("category","==" ,`${id}`))
+        
+        const itemFiltrado = id
 
-        const itemFiltrado = id 
-        ? query(itemCollection, where("category","==" , id)) 
+        ? query(itemCollection, where("category", "==", id)) 
         : itemCollection;
 
         getDocs(itemFiltrado)

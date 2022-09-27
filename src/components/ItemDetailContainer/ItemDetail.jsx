@@ -13,7 +13,8 @@ export const ItemDetail = ({item}) => {
   };
 
   return (
-    <div>
+    <div className="row row-cols-1 row-cols-md-4 g-4 row-cols-sm-2">
+      <div className="card h-100 product-container">
         <img src={item.img} alt={item.title} className="card-img-top product-photo"/>
         <h2>{item.title}</h2>
         <h3>{item.description}</h3>
@@ -24,7 +25,8 @@ export const ItemDetail = ({item}) => {
         <ItemCount stock={item.stock} initial={getProductQuantity(item.id)} onAdd={onAdd}/> 
         : 
         <Link to="/cart">Ir al carrito</Link>}
-
+      </div>
     </div>
+    
   )
 }
